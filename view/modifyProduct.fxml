@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="modifyPartMulti" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="982.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventorymangementsystem_c482.view.ModifyProductController">
+   <children>
+      <TableView fx:id="modifyProductAddTable" layoutX="409.0" layoutY="80.0" prefHeight="196.0" prefWidth="509.0">
+        <columns>
+          <TableColumn fx:id="modifyProdMultiPartAddColID" prefWidth="115.0" text=" Part ID" />
+          <TableColumn fx:id="modifyProdMultiPartAddColName" prefWidth="122.0" text="Part Name" />
+            <TableColumn fx:id="modifyProdMultiPartAddColInvLvl" prefWidth="134.0" text="Inventory Level" />
+            <TableColumn fx:id="modifyProdMultiPartAddColPriceCost" prefWidth="137.0" text="Price per Unit" />
+        </columns>
+      </TableView>
+      <TableView fx:id="modifyProductDeleteTable" layoutX="409.0" layoutY="319.0" prefHeight="204.0" prefWidth="521.0">
+        <columns>
+          <TableColumn fx:id="modifyProdMultiPartDeleteColID" prefWidth="125.0" text="Part ID" />
+          <TableColumn fx:id="modifyProdMultiPartDeleteColName" prefWidth="120.0" text="Part Name" />
+            <TableColumn fx:id="modifyProdMultiPartDeleteColInvLvl" prefWidth="141.0" text="Inventory Level" />
+            <TableColumn fx:id="modifyProdMultiPartDeleteColPrice" prefWidth="134.0" text="Price per Unit" />
+        </columns>
+      </TableView>
+      <TextField fx:id="modifyProdMultiTxtSearch" layoutX="718.0" layoutY="33.0" />
+      <Button layoutX="618.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#onActionSearchModifyProdutMulti" prefHeight="25.0" prefWidth="75.0" text="Search" />
+      <Button layoutX="843.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#onActionAddModifyProdMulti" prefHeight="25.0" prefWidth="75.0" text="Add" />
+      <Button layoutX="843.0" layoutY="537.0" mnemonicParsing="false" onMouseClicked="#onActionDeletemodifyProdMulti" prefHeight="25.0" prefWidth="75.0" text="Delete" />
+      <Button layoutX="844.0" layoutY="583.0" mnemonicParsing="false" onMouseClicked="#onActionCancelModifyProdMulti" prefHeight="25.0" prefWidth="75.0" text="Cancel" />
+      <Button layoutX="727.0" layoutY="583.0" mnemonicParsing="false" onMouseClicked="#onActionSavemodifyProdMulti" prefHeight="25.0" prefWidth="93.0" text="Save" />
+      <Text layoutX="78.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify Product" wrappingWidth="93.0" />
+      <AnchorPane fx:id="modifyPartMultiTxt" layoutX="23.0" layoutY="155.0" prefHeight="342.0" prefWidth="359.0">
+         <children>
+            <GridPane layoutX="29.0" layoutY="37.0" prefHeight="93.0" prefWidth="240.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="67.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="161.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="modifyProdMultiTxtId" GridPane.columnIndex="1" />
+                  <TextField fx:id="modifyProdMultiTxtName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="30.0" layoutY="130.0" prefHeight="153.0" prefWidth="300.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="modifyProdMultiTxtInv" GridPane.columnIndex="1" />
+                  <TextField fx:id="modifyProdMultiTxtPrice" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="modifyProdMultiTxtMax" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="modifyProdMultiTxtMin" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inv" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Max" GridPane.rowIndex="2" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Min" textAlignment="CENTER" wrappingWidth="48.47265625" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
